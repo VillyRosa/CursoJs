@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body style="font: normal 15pt Arial;">
+    
+    <h1>Sistema de verificação de nacionalidades!</h1>
+
+    <label for="txtPais">País de origem</label>
+    <input type="text" name="txtPais" id="txtPais" placeholder="Digite seu país de origem">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div style="margin-top: 10px;" id="resp"></div>
+
+    <script>
+
+        var paistxt = window.document.querySelector('input#txtPais')
+        var nacionalidade = window.document.querySelector('div#resp')
+        nacionalidade.innerHTML = `Aguardando dados...`
+
+        function verificar()
+        {
+            var pais = paistxt.value
+            
+            if(pais == 'Brasil')
+            {
+                nacionalidade.innerHTML = `Você nasceu no Brasil e é Brasileiro!`
+            }
+            else
+            {
+                nacionalidade.innerHTML = `Estrangeiro!`
+            }
+        }
+
+    </script>
+</body>
+</html>
