@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{ 
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 class="titulo">Iniciando estudos com DOM</h1>
+    <p>Aqui vai os resultados</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Java Script</p>
+    <div id="msg">Clique em mim</div><br>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        
+        window.document.write(`Está escrito assim no paragrafo: ${p1.innerText} <br/><br/>`) //Fazendo escrever o valor da variavel p1 na tela
+        window.document.write(`Está escrito assim no html: ${p1.innerHTML} <br/><br/>`) //Fazendo escrever o valor da variavel p1 na tela com tudo oque esta nele
+        p1.style.color = "blue"
+        corpo.style.backgroundColor = 'rgb(117, 207, 65)'
+        //Estilizando a variavel d
+        var d = window.document.getElementById('msg')
+        d.style.backgroundColor = "yellow"
+        d.style.width = "300px"
+        d.style.height = "30px"
+        d.style.borderRadius = "8px"
+        d.innerText = "Estou aguardando..."
+        d.style.color = 'black'
+
+        var title = window.document.querySelector('h1.titulo')
+        title.style.color = 'Black'
+
+    </script>
+</body>
+</html>
