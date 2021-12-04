@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+    <style>
+        input{
+            margin-top: 15px;
+        }
+        div{
+            margin-top: 15px;
+        }
+        #botao{
+            margin-left: -1px;
+        }
+        #inicio{
+            margin-left: 10px;
+        }
+        #fim{
+            margin-left: 25px;
+        }
+        #passo{
+            margin-left: 2px;
+        }
+    </style>
+<body>
+
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+
+    <section>
+        <div>
+            <label for="inicio">Início:</label>
+            <input type="number" name="inico" id="inicio"><br>
+            <label for="fim">Fim:</label>
+            <input type="number" name="fim" id="fim"><br>
+            <label for="passo">Passo:</label>
+            <input type="number" name="passo" id="passo"><br>
+            <input type="button" value="Contar" id="botao" onclick="contar()">
+            <input type="button" value="Limpar" id="botao" onclick="limpar()"><br>     
+        </div>
+        <div>
+            <p id="res"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p><a href="https://github.com/VillyRosa">&copy;VillyRosa</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
